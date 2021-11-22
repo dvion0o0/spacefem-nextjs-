@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/Navbar.module.css'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import icon from '../public/assets/shared/icon-hamburger.svg'
 

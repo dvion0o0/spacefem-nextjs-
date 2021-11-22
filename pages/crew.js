@@ -259,9 +259,5 @@ margin-top:10rem;
 @media screen and (min-width: 450px) and (max-width: 850px) {
 justify-content: center;
 }
-   }
 
-
-
- 
-`
+    }`

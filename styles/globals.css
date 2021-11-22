@@ -105,6 +105,8 @@ p {
 
 .active {
   right: 0 !important;
+  width: 254px;
+  overflow: auto;
 }
 
 .hide {

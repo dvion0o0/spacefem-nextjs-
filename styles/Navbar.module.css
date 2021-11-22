@@ -1,0 +1,92 @@
+.nav {
+  width: 100%;
+  height: 80px;
+  background: none;
+  position: absolute;
+  top: 3%;
+  left: 0;
+  z-index: 99;
+}
+
+.navcenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navlinks {
+  position: relative;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.04);
+  height: 100%;
+  flex: 0 0 60%;
+  padding: 0 3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navlinks::before {
+  content: '';
+  position: absolute;
+  width: 55%;
+  height: 0.5px;
+  background-color: var(--white);
+  z-index: 1;
+  top: 50%;
+  left: -50%;
+}
+
+.navlinks > li {
+  height: 100%;
+}
+
+.navlink {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.navlink:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.active {
+  border-bottom: 1px solid var(--white);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  .toggle {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+  .navlinks {
+    flex: 0 0 70%;
+    padding: 0 1rem;
+  }
+
+  .navlinks::before {
+    display: none;
+  }
+}

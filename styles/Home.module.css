@@ -1,116 +1,145 @@
-.container {
-  padding: 0 2rem;
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url(../public/assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  position: relative;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.homecenter {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1400px;
   align-items: center;
+  position: relative;
 }
 
-.footer {
+.homecontent {
+  display: grid;
+  position: absolute;
+  top: 35%;
+  left: 0;
+
+  /* place-items: center; */
+}
+
+.homecontent h1 {
+  margin: 1rem 0;
+}
+
+.homebutton {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 70%;
+  right: 5%;
+  transform: translate(-5%, -70%);
+  place-items: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.homebutton > button {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
   text-align: center;
+  font-size: 32px;
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  letter-spacing: 2px;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.homebutton > button:hover {
+  box-shadow: 3px 3px 10px 30px rgba(255, 255, 255, 0.2);
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+@media screen and (max-width: 450px) {
+  .wrapper {
+    background: url(../public/assets/home/background-home-mobile.jpg) no-repeat
+      center center fixed;
+    background-size: cover;
+  }
+
+  .homecenter {
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding-top: 7rem;
+  }
+
+  .homecontent {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .homecontent > h1 {
+    font-size: 70px;
+  }
+
+  .homecontent > h5 {
+    font-size: 16px;
+  }
+
+  .homecontent > p {
+    width: 100% !important;
+    font: 15px;
+    line-height: 25px;
+  }
+
+  .homebutton {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+
+  .homebutton > button {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+  }
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+@media screen and (min-width: 450px) and (max-width: 1020px) {
+  .wrapper {
+    background: url(../public/assets/home/background-home-tablet.jpg) no-repeat
+      center center fixed;
+    background-size: cover;
+  }
+
+  .homecenter {
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding-top: 7rem;
+  }
+
+  .homecontent {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .homecontent > p {
+    width: 30rem !important;
+  }
+
+  .homebutton {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media screen and (min-width: 1021px) and (max-width: 1400px) {
+  .homebutton {
+    right: -5%;
+    top: 60%;
   }
 }

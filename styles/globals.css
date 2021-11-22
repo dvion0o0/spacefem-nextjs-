@@ -1,16 +1,137 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Bellefair&display=swap');
+
+:root {
+  --black: #0b0d17;
+  --lightViolet: #d0d6f9;
+  --white: #ffffff;
+  --subheading1: 28px;
+  --subheading2: 14px;
+  --subheading2-letter: 2.35px;
+  --tabText: 16px;
+  --tab-letter: 2.7px;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+  /* overflow: hidden; */
+  /* background: red; */
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font-size: inheritvar(--tabText);
+  letter-spacing: var(--tab-letter);
+  font-family: 'Barlow Condensed', sans-serif;
+  color: var(--white);
 }
 
-* {
-  box-sizing: border-box;
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: 'Bellefair', serif;
+  font-weight: 400 !important;
+}
+
+p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 400 !important;
+}
+
+h1 {
+  font-size: 150px;
+  color: var(--white);
+  font-weight: 400 !important;
+}
+
+h2 {
+  font-size: 100px;
+  color: var(--white);
+}
+
+h3 {
+  font-size: 56px;
+  color: var(--white);
+}
+
+h4 {
+  font-size: 32px;
+  color: var(--black);
+}
+
+h5 {
+  font-size: 28px;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 4.75px;
+  font-weight: 400;
+  color: var(--lightViolet);
+}
+
+p {
+  font-size: 18px;
+  color: var(--lightViolet);
+  line-height: 35px;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
+.sidebar {
+  top: 0;
+  min-height: 100vh;
+  z-index: 999;
+  position: absolute;
+  width: 254px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  transition: right 0.3s ease-in-out;
+}
+
+.active {
+  right: 0 !important;
+}
+
+.hide {
+  right: -100vw !important;
+}
+
+.sidebar-center {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: grid;
+  position: relative;
+}
+
+.sidebar-center > img {
+  justify-self: end;
+  cursor: pointer;
+}
+
+.side-links {
+  margin-top: 6rem;
+  display: grid;
+  row-gap: 2rem;
+}
+
+@media screen and (min-width: 450px) {
+  .sidebar {
+    display: none;
+  }
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Sidebar = ({ toggle, setToggle }) => {
   return (
-    <div className={`${toggle ? 'sidebar active' : 'sidebar hide'}`}>
+    <div className={`${toggle ? 'sidebar show' : 'sidebar hide'}`}>
       <div className='sidebar-center'>
         <img
           src='/assets/shared/icon-close.svg'

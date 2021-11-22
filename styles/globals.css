@@ -97,22 +97,30 @@ p {
   min-height: 100vh;
   z-index: 999;
   position: absolute;
+  right: 0;
   width: 254px;
   background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(80px);
   backdrop-filter: blur(81.5485px);
-  transition: right 0.3s ease-in-out;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .sidebar {
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+  }
 }
 
 .active {
-  right: 0 !important;
   width: 254px;
   overflow: auto;
 }
 
 .hide {
-  right: -100vw !important;
   width: 0;
-  overflow: hidden;
 }
 
 .sidebar-center {
